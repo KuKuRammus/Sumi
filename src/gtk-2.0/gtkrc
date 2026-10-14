@@ -1,0 +1,63 @@
+# Sumi for GTK 2: colors only, drawn by GTK's built-in engine (no pixmaps).
+
+gtk-color-scheme = "bg_color:$bg_alt\nfg_color:$fg\nbase_color:$bg\ntext_color:$fg"
+gtk-color-scheme = "selected_bg_color:$accent\nselected_fg_color:$on_accent"
+gtk-color-scheme = "tooltip_bg_color:$bg_raised\ntooltip_fg_color:$fg"
+
+gtk-auto-mnemonics = 1
+gtk-primary-button-warps-slider = 1
+
+style "sumi" {
+  xthickness = 1
+  ythickness = 1
+
+  GtkWidget::focus-line-width = 0
+  GtkWidget::link-color = "$accent_hi"
+  GtkWidget::visited-link-color = "$accent_hi"
+  GtkMenuItem::selected-shadow-type = GTK_SHADOW_NONE
+  GtkScrolledWindow::scrollbar-spacing = 0
+
+  bg[NORMAL]        = @bg_color
+  bg[PRELIGHT]      = "$bg_raised"
+  bg[ACTIVE]        = "$bg_dark"
+  bg[SELECTED]      = @selected_bg_color
+  bg[INSENSITIVE]   = @bg_color
+
+  fg[NORMAL]        = @fg_color
+  fg[PRELIGHT]      = "$fg_bright"
+  fg[ACTIVE]        = @fg_color
+  fg[SELECTED]      = @selected_fg_color
+  fg[INSENSITIVE]   = "$dim"
+
+  base[NORMAL]      = @base_color
+  base[PRELIGHT]    = "$bg_raised"
+  base[ACTIVE]      = "$sel_inactive"
+  base[SELECTED]    = @selected_bg_color
+  base[INSENSITIVE] = @bg_color
+
+  text[NORMAL]      = @text_color
+  text[PRELIGHT]    = @text_color
+  text[ACTIVE]      = @text_color
+  text[SELECTED]    = @selected_fg_color
+  text[INSENSITIVE] = "$dim"
+}
+
+style "sumi-tooltip" {
+  bg[NORMAL] = @tooltip_bg_color
+  fg[NORMAL] = @tooltip_fg_color
+}
+
+style "sumi-menu" {
+  bg[NORMAL]   = @bg_color
+  bg[PRELIGHT] = @selected_bg_color
+  fg[PRELIGHT] = @selected_fg_color
+}
+
+style "sumi-progress" {
+  bg[PRELIGHT] = @selected_bg_color
+}
+
+class "GtkWidget"   style "sumi"
+widget "gtk-tooltip*" style "sumi-tooltip"
+widget_class "*<GtkMenu>*" style "sumi-menu"
+class "GtkProgressBar" style "sumi-progress"

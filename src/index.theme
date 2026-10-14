@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Sumi
+Comment=Dark theme with one deep-blue accent
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Sumi

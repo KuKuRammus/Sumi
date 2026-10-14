@@ -1,0 +1,35 @@
+# Sumi palette. Every color in the theme comes from this file.
+# Templates refer to a color as $name, or $name/0.5 for 50% opacity.
+
+# Surfaces, darkest to lightest
+border_deep = "#09090b"   # widget borders
+bg_dark     = "#0c0e11"   # header bars, sidebars, toolbars
+bg          = "#111316"   # views: lists, text, entries
+bg_alt      = "#16181d"   # window background, menus, popovers
+bg_raised   = "#22242a"   # hover, raised and inactive elements
+border      = "#2a2d34"   # separators, frames
+guide       = "#34373e"   # faint outlines, disabled borders
+
+# Text
+fg_bright = "#f1f1f1"     # titles, emphasis
+fg        = "#bebdb9"     # default text
+fg_muted  = "#959699"     # secondary text, placeholders
+muted     = "#5f636e"     # inactive labels, backdrop text
+dim       = "#4f545d"     # disabled text, unchecked control borders
+
+# Accent
+accent         = "#0a84c6"   # focus, selection, checked controls, progress
+accent_pressed = "#006fb6"   # pressed accent, borders around accent fills
+accent_hi      = "#59c2ff"   # accent as text: links, info
+on_accent      = "#0c0e11"   # text and icons on accent or state fills
+sel_inactive   = "#1e3b53"   # selection in an unfocused pane
+
+# State
+error       = "#f07178"   # error text, close button
+destructive = "#d9525a"   # destructive and error fills
+warn        = "#ffb454"   # warnings, minimize button
+ok          = "#aad94c"   # success, maximize button
+
+# Light and shadow, used with opacity only
+shadow    = "#000000"
+highlight = "#ffffff"
